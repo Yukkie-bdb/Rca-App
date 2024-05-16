@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginAppExemplo.Pages.EditUserPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="EditUserPage">
+    <VerticalStackLayout
+    Margin="15"
+    Padding="15"
+    Spacing="5">
+
+        <Label 
+        Text="Cadastro"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        FontSize="Title"/>
+
+        <Label
+        x:Name="LBLNome"
+        Text="Nome"
+        TextColor="White"
+        FontSize="Subtitle"/>
+
+        <Entry
+        x:Name="TXTNome"
+        Placeholder="Bota teu Name aqui man"
+        Keyboard="Text"
+        Text="{Binding Nome}"/>
+        
+        <Label
+        x:Name="LBLEmail"
+        Text="Email"
+        TextColor="White"
+        FontSize="Subtitle"/>
+
+        <Entry
+        x:Name="TXTEmail"
+        Placeholder="Bota teu email aqui man"
+        Keyboard="Email"
+        Text="{Binding Email}"/>
+
+        <Label
+        x:Name="LBLSenha"
+        Text="Email"
+        TextColor="White"
+        FontSize="Subtitle"/>
+
+        <Entry
+        x:Name="TXTSenha"
+        Placeholder="Bota teu Senha aqui man 2"
+        Keyboard="Text"
+        IsPassword="True"
+        Text="{Binding Senha}"/>
+
+        <Button
+        x:Name="BTNCadastar"
+        Text="Cadastro"
+        TextColor="Black"
+        WidthRequest="250"
+        BackgroundColor="#F2E7DC"
+        Clicked="BTNCadastar_Clicked"/>
+        
+        <Button
+        x:Name="BTNVoltar"
+        Text="Voltar"
+        TextColor="Black"
+        WidthRequest="250"
+        BackgroundColor="#F2E7DC"
+        Clicked="BTNVoltar_Clicked"/>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
