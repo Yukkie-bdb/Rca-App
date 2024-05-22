@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoginAppExemplo.Model
+namespace RcaApp.Model
 {
     public class Usuario
     {

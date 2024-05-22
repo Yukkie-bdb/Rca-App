@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LoginAppExemplo.Pages.EditUserPage"
+             x:Class="RcaApp.Pages.EditUserPage"
              NavigationPage.HasNavigationBar="False"
-             Title="EditUserPage">
-    <VerticalStackLayout
+             Title="EditUserPage"
+              BackgroundImageSource="zap3.png">
+
+    <!--<VerticalStackLayout
     Margin="15"
     Padding="15"
     Spacing="5">
@@ -26,7 +28,7 @@
         Placeholder="Bota teu Name aqui man"
         Keyboard="Text"
         Text="{Binding Nome}"/>
-        
+
         <Label
         x:Name="LBLEmail"
         Text="Email"
@@ -59,7 +61,7 @@
         WidthRequest="250"
         BackgroundColor="#F2E7DC"
         Clicked="BTNCadastar_Clicked"/>
-        
+
         <Button
         x:Name="BTNVoltar"
         Text="Voltar"
@@ -70,5 +72,231 @@
 
 
 
-    </VerticalStackLayout>
+    </VerticalStackLayout>-->
+
+
+    <Grid Margin="0,60,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout
+         Grid.Row="0"
+         Margin="15"
+         Padding="15"
+         Spacing="5">
+
+
+            <Label 
+             Text="BEM-VINDO!"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+             FontSize="40"
+             FontAttributes="Bold"
+             TextColor="White">
+
+                <Label.Shadow>
+                    <Shadow Brush="Black"
+                         Offset="2,2"
+                         Radius="0"
+                         Opacity="1" />
+                </Label.Shadow>
+
+            </Label>
+
+            <Label 
+             Text="Para continuar crie uma conta"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+             FontSize="20"
+             TextColor="white">
+
+                <Label.Shadow>
+                    <Shadow Brush="Black"
+                         Offset="2,2"
+                         Radius="0"
+                         Opacity="1" />
+                </Label.Shadow>
+
+            </Label>
+
+            <Border Margin="0,30,0,10">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20,20,20,20" />
+                </Border.StrokeShape>
+
+                <StackLayout 
+                 Padding="10,0,10,0"
+                 BackgroundColor="#FFDC54">
+
+                    <Entry
+                     x:Name="TXTNome1"
+                     Placeholder="Nome"
+                     PlaceholderColor="Black"
+                     TextColor="Black"
+                     Keyboard="Email"
+                     FontSize="20"
+                     Text="{Binding Nome}"/>
+
+                </StackLayout>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                         Offset="0,20"
+                         Radius="20"
+                         Opacity="0.5" />
+                </Border.Shadow>
+
+            </Border>
+
+            <Border Margin="0,0,0,10">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20,20,20,20" />
+                </Border.StrokeShape>
+
+                <StackLayout Padding="10,0,10,0"
+                          BackgroundColor="#FFDC54">
+                    <Entry     
+                     x:Name="TXTEmail1"
+                     Placeholder="E-mail"
+                     PlaceholderColor="Black"
+                     Keyboard="Email"
+                     TextColor="Black"
+                     FontSize="20"
+                      Text="{Binding Email}"/>
+
+                </StackLayout>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                         Offset="0,20"
+                         Radius="20"
+                         Opacity="0.5" />
+                </Border.Shadow>
+
+            </Border>
+
+
+            <Border >
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20,20,20,20" />
+                </Border.StrokeShape>
+
+                <StackLayout Padding="10,0,10,0"
+                          BackgroundColor="#FFDC54">
+                    <Entry     
+                     x:Name="TXTSenha1"
+                     Placeholder="Senha"
+                     PlaceholderColor="Black"
+                     Keyboard="Text"
+                     TextColor="Black"
+                     IsPassword="True"
+                     FontSize="20"
+                     Text="{Binding Senha}"/>
+
+                </StackLayout>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                         Offset="0,20"
+                         Radius="20"
+                         Opacity="0.5" />
+                </Border.Shadow>
+
+            </Border>
+
+            <Border StrokeThickness = "0">
+
+                <Button
+                 x:Name="BTNCadastrar"
+                 Text="CADASTRAR"
+                 TextColor="Black"
+                 WidthRequest="250"
+                 BackgroundColor="#FFDC54"
+                 Clicked="BTNCadastar_Clicked"
+                 FontAttributes="Bold"
+                 FontSize="20"
+                 Margin="0,25,0,0"/>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                          Offset="20,20"
+                          Radius="30"
+                          Opacity="0.5" />
+                </Border.Shadow>
+
+            </Border>
+
+            <Border StrokeThickness = "0">
+
+                <Button
+                    x:Name="BTNVoltar"
+                    Text="Voltar"
+                    TextColor="Black"
+                    WidthRequest="200"
+                    BackgroundColor="#ffedaa"
+                    Clicked="BTNVoltar_Clicked"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Margin="0,25,0,0"/>
+
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                              Offset="20,20"
+                              Radius="30"
+                              Opacity="0.5" />
+                </Border.Shadow>
+
+            </Border>
+
+
+        </VerticalStackLayout>
+
+
+
+        <Border
+         BackgroundColor="#FFDC54"
+         HeightRequest="40"
+         HorizontalOptions="FillAndExpand"
+         Margin="0"
+         Padding="0"
+         Grid.Row="1"  
+         VerticalOptions="Center"
+         StrokeThickness = "0">
+
+            <Border.Shadow>
+                <Shadow Brush="Black"
+                     Offset="20,20"
+                     Radius="30"
+                     Opacity="1" />
+            </Border.Shadow>
+
+            <Label
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             FontAttributes="Bold"
+             FontSize="Default">
+
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Já possui uma conta? " TextColor="Black"/>
+                        <Span Text="Faça Login agora!" TextColor="Black" FontAttributes="Bold" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="BTNLogin_Clicked" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+
+            </Label>
+
+        </Border>
+
+    </Grid>
+
 </ContentPage>

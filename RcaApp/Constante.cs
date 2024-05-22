@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace LoginAppExemplo
+namespace RcaApp
 {
     public static class Constants
     {

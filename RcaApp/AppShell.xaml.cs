@@ -1,4 +1,4 @@
-﻿namespace LoginAppExemplo
+﻿namespace RcaApp
 {
     public partial class AppShell : Shell
     {

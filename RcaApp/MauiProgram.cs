@@ -1,4 +1,4 @@
-﻿using LoginAppExemplo;
+﻿using RcaApp;
 using Microsoft.Extensions.Logging;
 
 namespace RcaApp
@@ -17,7 +17,7 @@ namespace RcaApp
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

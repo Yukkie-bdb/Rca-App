@@ -1,0 +1,35 @@
+﻿ <Grid HeightRequest="75" Margin="0,0,0,0" BackgroundColor="Beige" VerticalOptions="Start">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="bricksvg.svg" Grid.Row="0" Grid.Column="1" Aspect="Fill" />
+            <Image Source="bricksvg2.svg" Grid.Row="0" Grid.Column="3" Aspect="Fill" />
+
+            <Grid Column="1" Margin="15,0,15,0">
+                <ImageButton BackgroundColor="AliceBlue" x:Name="BTNBack" Source="arrow.svg" Clicked="BTNBack_Clicked" CornerRadius="25" WidthRequest="50" HeightRequest="50" 
+                 HorizontalOptions="Start" VerticalOptions="Center">
+
+                </ImageButton>
+            </Grid>
+
+            <Grid Column="2">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="RCA" FontSize="40" FontAttributes="Bold"></Label>
+            </Grid>
+
+            <Grid Column="3" Margin="15,0,15,0">
+                <ImageButton BackgroundColor="AliceBlue" x:Name="BTNAccount" Source="person.svg" Clicked="BTNAccount_Clicked" CornerRadius="25" WidthRequest="50" HeightRequest="50" 
+                     HorizontalOptions="End" VerticalOptions="Center">
+
+                </ImageButton>
+            </Grid>
+
+        </Grid>

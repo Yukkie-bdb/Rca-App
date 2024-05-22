@@ -1,8 +1,8 @@
-﻿using LoginAppExemplo.Data;
-using LoginAppExemplo.Model;
-using LoginAppExemplo.Pages;
+﻿using RcaApp.Data;
+using RcaApp.Model;
+using RcaApp.Pages;
 
-namespace LoginAppExemplo
+namespace RcaApp
 {
     public partial class App : Application
     {
@@ -25,7 +25,7 @@ namespace LoginAppExemplo
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new HomePage());
         }
     }
 }

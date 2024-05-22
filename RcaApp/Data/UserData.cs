@@ -1,4 +1,4 @@
-﻿using LoginAppExemplo.Model;
+﻿using RcaApp.Model;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoginAppExemplo.Data
+namespace RcaApp.Data
 {
     public class UserData
     {

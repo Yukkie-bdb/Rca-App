@@ -1,4 +1,4 @@
-﻿namespace LoginAppExemplo.Data
+﻿namespace RcaApp.Data
 {
     public interface ISQLiteDB
     {

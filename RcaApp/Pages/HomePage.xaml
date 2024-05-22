@@ -1,12 +1,133 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LoginAppExemplo.Pages.HomePage"
-             Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="RcaApp.Pages.HomePage"
+             Title="HomePage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid HeightRequest="75" Margin="0,0,0,0" BackgroundColor="Beige" VerticalOptions="Start">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="bricksvg.svg" Grid.Row="0" Grid.Column="1" Aspect="Fill" />
+                <Image Source="bricksvg2.svg" Grid.Row="0" Grid.Column="3" Aspect="Fill" />
+
+                <Grid Column="1" Margin="15,0,15,0">
+
+                </Grid>
+
+                <Grid Column="2">
+                    <Label HorizontalOptions="Center" VerticalOptions="Center" Text="RCA" FontSize="40" FontAttributes="Bold"></Label>
+                </Grid>
+
+                <Grid Column="3" Margin="15,0,15,0">
+                    <ImageButton BackgroundColor="AliceBlue" x:Name="BTNAccount" Source="person.svg" Clicked="BTNAccount_Clicked" CornerRadius="25" WidthRequest="50" HeightRequest="50" 
+                     HorizontalOptions="End" VerticalOptions="Center">
+                    </ImageButton>
+                </Grid>
+
+            </Grid>
+
+            <Label Text="Construção" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
+
+            <Grid Background="AntiqueWhite" >
+                <Label FontSize="Body" Margin="15,15,15,15" Text="Somos uma empresa do ramo de construção civil, trazendo o que há de melhor em Lajes, Ferragem Armada e Pedras Portuguesas para calçadas decorativas, com experiência de 20 anos na área. Temos técnicos e mão de obra especializada e comprometida com o serviço."></Label>
+            </Grid>
+
+            <Label Text="Nossos Serviços" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
+
+            <Grid Margin="15,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <Grid Row="0" Column="0" Margin="5,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid BackgroundColor="AntiqueWhite" Row="0" Column="0">
+                        <Label Text="CALÇADAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                    </Grid>
+
+                    <Grid BackgroundColor="AntiqueWhite" Row="1" Column="0">
+                        <Image Source="calcada.png" HeightRequest="170" WidthRequest="170"></Image>
+                    </Grid>
+
+                </Grid>
+
+
+
+                <Grid Row="0" Column="1" Margin="5,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid BackgroundColor="AntiqueWhite" Row="0" Column="0">
+                        <Label Text="CALÇADAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                    </Grid>
+
+                    <Grid BackgroundColor="AntiqueWhite" Row="1" Column="0">
+                        <Image Source="calcada.png" HeightRequest="170" WidthRequest="170"></Image>
+                    </Grid>
+
+                </Grid>
+
+                <Grid Row="1" Column="0" Margin="5,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid BackgroundColor="AntiqueWhite" Row="0" Column="0">
+                        <Label Text="CALÇADAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                    </Grid>
+
+                    <Grid BackgroundColor="AntiqueWhite" Row="1" Column="0">
+                        <Image Source="calcada.png" HeightRequest="170" WidthRequest="170"></Image>
+                    </Grid>
+
+                </Grid>
+
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
