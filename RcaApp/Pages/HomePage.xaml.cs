@@ -16,4 +16,19 @@ public partial class HomePage : ContentPage
     {
 
     }
+
+    private void BTNTellIcon_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void BTNFaceIcon_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void BTNZapIcon_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -4,12 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:RcaApp"
+    xmlns:views="clr-namespace:RcaApp.Pages"
     Shell.FlyoutBehavior="Disabled"
     Title="RcaApp">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent Title="Cats"
+                     Icon="cat.png"
+                     ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent Title="Dogs"
+                     Icon="dog.png"
+                     ContentTemplate="{DataTemplate views:LoginPage}" />
+    </TabBar>
 
 </Shell>

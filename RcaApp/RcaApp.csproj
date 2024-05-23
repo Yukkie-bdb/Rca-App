@@ -67,7 +67,6 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 		<PackageReference Include="Syncfusion.Maui.Scheduler" Version="25.2.4" />
-		<PackageReference Include="Syncfusion.SfScheduler.WPF" Version="25.2.4" />
 		<PackageReference Include="TaskScheduler" Version="2.11.0" />
 	</ItemGroup>
 
