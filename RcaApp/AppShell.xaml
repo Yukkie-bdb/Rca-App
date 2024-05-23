@@ -8,13 +8,9 @@
     Shell.FlyoutBehavior="Disabled"
     Title="RcaApp">
 
-    <TabBar>
-        <ShellContent Title="Cats"
-                     Icon="cat.png"
-                     ContentTemplate="{DataTemplate views:HomePage}" />
-        <ShellContent Title="Dogs"
-                     Icon="dog.png"
-                     ContentTemplate="{DataTemplate views:LoginPage}" />
-    </TabBar>
+    <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
 
 </Shell>
