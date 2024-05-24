@@ -1,11 +1,11 @@
 namespace RcaApp.Pages;
 
-public partial class HomePage : ContentPage
+public partial class LajePage : ContentPage
 {
-    public HomePage()
-    {
-        InitializeComponent();
-    }
+	public LajePage()
+	{
+		InitializeComponent();
+	}
 
     private void BTNBack_Clicked(object sender, EventArgs e)
     {

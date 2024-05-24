@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RcaApp.Pages.HomePage"
-             Title="HomePage"
+             x:Class="RcaApp.Pages.LajePage"
+             Title="LajePage"
              NavigationPage.HasNavigationBar="False">
     <ScrollView>
         <VerticalStackLayout>
 
-            <Grid HeightRequest="75" Margin="0,0,0,0" BackgroundColor="Beige" VerticalOptions="Start">
+            <Grid HeightRequest="75" Margin="0,0,0,0" BackgroundColor="Azure" VerticalOptions="Start">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -33,7 +33,7 @@
 
                 <Grid Column="3" Margin="15,0,15,0">
                     <ImageButton BackgroundColor="AliceBlue" x:Name="BTNAccount" Source="person.svg" Clicked="BTNAccount_Clicked" CornerRadius="25" WidthRequest="50" HeightRequest="50" 
-                     HorizontalOptions="End" VerticalOptions="Center">
+                  HorizontalOptions="End" VerticalOptions="Center">
                     </ImageButton>
                 </Grid>
 
@@ -238,7 +238,7 @@
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                
+
                 <Grid Column="0" BackgroundColor="AliceBlue" Margin="25,25,25,25">
                     <Border>
                         <Border.StrokeShape>
@@ -270,11 +270,11 @@
 
                     <Grid Row="2"  BackgroundColor="AliceBlue">
                         <HorizontalStackLayout>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="blackstar.svg"></Image>
+                            <Image Source="star.svg"></Image>
+                            <Image Source="star.svg"></Image>
+                            <Image Source="star.svg"></Image>
+                            <Image Source="star.svg"></Image>
+                            <Image Source="blackstar.svg"></Image>
                         </HorizontalStackLayout>
                     </Grid>
                 </Grid>
@@ -413,8 +413,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
-                
+
+
                 <ImageButton Grid.Column="0" x:Name="BTNIconMenuInferiorHome" Source="homeicon.svg" Clicked="BTNIconMenuInferiorHome_Clicked"></ImageButton>
                 <ImageButton Grid.Column="1" x:Name="BTNIconMenuInferiorLaje" Source="lajeicon.svg" Clicked="BTNIconMenuInferiorLaje_Clicked"></ImageButton>
                 <ImageButton Grid.Column="2" x:Name="BTNIconMenuInferiorInfo" Source="infoicon.svg" Clicked="BTNIconMenuInferiorInfo_Clicked"></ImageButton>
@@ -424,5 +424,4 @@
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
