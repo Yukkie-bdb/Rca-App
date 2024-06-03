@@ -1,0 +1,137 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RcaApp
+build_property.ProjectDir = C:\Users\Eric\Desktop\Rca-App\RcaApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Acount.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Acount.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Acount.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Acount.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/AcabamentoCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.AcabamentoCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\AcabamentoCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\AcabamentoCardPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/CalçadaCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.CalçadaCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\CalçadaCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\CalçadaCardPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/EletricaCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.EletricaCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\EletricaCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\EletricaCardPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/Lajes.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.Lajes.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\Lajes.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\Lajes.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/MurosCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.MurosCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\MurosCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\MurosCardPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/Pintura.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.Pintura.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\Pintura.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\Pintura.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/PiscinasaCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.PiscinasaCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\PiscinasaCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\PiscinasaCardPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/ReformaCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.ReformaCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\ReformaCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\ReformaCardPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/Cards/Trelicas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.Cards.Trelicas.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Cards\Trelicas.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Cards\Trelicas.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/EditUserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.EditUserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\EditUserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\EditUserPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/InfoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.InfoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\InfoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\InfoPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/LajePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.LajePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LajePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LajePage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Eric/Desktop/Rca-App/RcaApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RcaApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

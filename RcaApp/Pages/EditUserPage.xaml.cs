@@ -24,6 +24,7 @@ public partial class EditUserPage : ContentPage
             await DisplayAlert("Erro", "Preencha todas as informações", "Fechar");
             return;
         }
+
         var cadastro = await App.BancoDados.UserDataTable.salvarUsuario(_usuario);
 
         if (cadastro > 0)
@@ -43,4 +44,6 @@ public partial class EditUserPage : ContentPage
     {
         await Navigation.PushAsync(new LoginPage());
     }
+
+
 }

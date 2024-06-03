@@ -66,6 +66,26 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+		<PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Cards\AcabamentoCardPage.xaml.cs">
+	    <DependentUpon>AcabamentoCardPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Cards\PiscinasaCardPage.xaml.cs">
+	    <DependentUpon>PiscinasaCardPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Cards\EletricaCardPage.xaml.cs">
+	    <DependentUpon>EletricaCardPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Cards\MurosCardPage.xaml.cs">
+	    <DependentUpon>MurosCardPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Cards\ReformaCardPage.xaml.cs">
+	    <DependentUpon>ReformaCardPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -76,6 +96,36 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Acount.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\AcabamentoCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\Lajes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\Pintura.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\PiscinasaCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\EletricaCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\MurosCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\ReformaCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\CalçadaCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Cards\Trelicas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\EditUserPage.xaml">

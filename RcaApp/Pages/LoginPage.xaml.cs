@@ -21,7 +21,6 @@ public partial class LoginPage : ContentPage
 
             if (usuario != null)
             {
-                await DisplayAlert("Sucesso", "Login efetuado com sucesso", "OK");
                 await Navigation.PushAsync(new HomePage());
                 App.Usuario = usuario;
             }

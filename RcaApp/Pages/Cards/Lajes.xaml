@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RcaApp.Pages.Cards.Lajes"
+             Title="Lajes"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid HeightRequest="75" Margin="0,0,0,0" BackgroundColor="#C8C8C8" VerticalOptions="Start" Row="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="bricksvgazul2.svg" Grid.Row="0" Grid.Column="1" Aspect="Fill" />
+            <Image Source="bricksvgazul.svg" Grid.Row="0" Grid.Column="3" Aspect="Fill" />
+
+            <Grid Column="1" Margin="15,0,15,0">
+                <ImageButton BackgroundColor="#C8C8C8" x:Name="BTNBack" Source="arrow.svg" Clicked="BTNBack_Clicked" CornerRadius="25" WidthRequest="50" HeightRequest="50" 
+                                HorizontalOptions="Start" VerticalOptions="Center">
+
+                </ImageButton>
+            </Grid>
+
+            <Grid Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"  HorizontalOptions="Center" VerticalOptions="Center" Text="Fortes     " FontSize="24" FontAttributes="Bold" TextColor="#262FFF"></Label>
+                <Label Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Text="     Lajes" FontSize="24" FontAttributes="Bold" TextColor="#262FFF"></Label>
+            </Grid>
+
+            <Grid Column="3" Margin="15,0,15,0">
+
+            </Grid>
+
+        </Grid>
+
+        <!--CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI-->
+        <!--CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI-->
+        <!--CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI-->
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout>
+
+                <Label Margin="0,30" Text="LAJES" FontAttributes="Bold" FontSize="36" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Column="0" Row="0" Margin="20,0,10,10">
+                        <Image Source="laje1.jpg"></Image>
+                    </Grid>
+                    <Grid Column="0" Row="1" Margin="20,0,10,10">
+                        <Image Source="laje2.jpg"></Image>
+                    </Grid>
+                    <Grid Column="0" Row="2" Margin="20,0,10,10">
+                        <Image Source="laje3.jpg"></Image>
+                    </Grid>
+
+                    <Grid Column="1" Row="0" Margin="10,0,20,10">
+                        <Image Source="laje4.jpg"></Image>
+                    </Grid>
+                    <Grid Column="1" Row="1" Margin="10,0,20,10">
+                        <Image Source="laje5.jpg"></Image>
+                    </Grid>
+                    <Grid Column="1" Row="2" Margin="10,0,20,10">
+                        <Image Source="laje6.jpg"></Image>
+                    </Grid>
+
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!--CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI-->
+        <!--CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI-->
+        <!--CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI CONTEUDO AQUI-->
+
+        <!--MENU INFERIOR - - - INICIO -->
+        <Grid Row="2" BackgroundColor="#494FD5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <ImageButton Grid.Column="0" x:Name="BTNIconMenuInferiorHome" Source="homeiconbranco.svg" Clicked="BTNIconMenuInferiorHome_Clicked"></ImageButton>
+            <ImageButton Grid.Column="1" x:Name="BTNIconMenuInferiorLaje" Source="lajeiconbranco.svg" Clicked="BTNIconMenuInferiorLaje_Clicked"></ImageButton>
+            <ImageButton Grid.Column="2" x:Name="BTNIconMenuInferiorInfo" Source="infoiconbranco.svg" Clicked="BTNIconMenuInferiorInfo_Clicked"></ImageButton>
+
+        </Grid>
+        <!--MENU INFERIOR - - - FIM -->
+
+    </Grid>
+</ContentPage>

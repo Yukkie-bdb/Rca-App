@@ -3,254 +3,220 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RcaApp.Pages.HomePage"
              Title="HomePage"
-             NavigationPage.HasNavigationBar="False">
-    <ScrollView>
-        <VerticalStackLayout>
+             NavigationPage.HasNavigationBar="False"
+              BackgroundImageSource="zap.png">
 
-            <Grid HeightRequest="75" Margin="0,0,0,0" BackgroundColor="Beige" VerticalOptions="Start">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+        <Grid HeightRequest="75" Margin="0,0,0,0" BackgroundColor="#FFDC54" VerticalOptions="Start" Row="0">
 
-                <Image Source="bricksvg.svg" Grid.Row="0" Grid.Column="1" Aspect="Fill" />
-                <Image Source="bricksvg2.svg" Grid.Row="0" Grid.Column="3" Aspect="Fill" />
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-                <Grid Column="1" Margin="15,0,15,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                </Grid>
+            <Image Source="bricksvg.svg" Grid.Row="0" Grid.Column="1" Aspect="Fill" />
+            <Image Source="bricksvg2.svg" Grid.Row="0" Grid.Column="3" Aspect="Fill" />
 
-                <Grid Column="2">
-                    <Label HorizontalOptions="Center" VerticalOptions="Center" Text="RCA" FontSize="40" FontAttributes="Bold"></Label>
-                </Grid>
-
-                <Grid Column="3" Margin="15,0,15,0">
-                    <ImageButton BackgroundColor="AliceBlue" x:Name="BTNAccount" Source="person.svg" Clicked="BTNAccount_Clicked" CornerRadius="25" WidthRequest="50" HeightRequest="50" 
-                     HorizontalOptions="End" VerticalOptions="Center">
-                    </ImageButton>
-                </Grid>
+            <Grid Column="1" Margin="15,0,15,0">
 
             </Grid>
 
-            <Label Text="Construção" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
-
-            <Grid Background="AntiqueWhite" >
-                <Label FontSize="Body" Margin="15,15,15,15" Text="Somos uma empresa do ramo de construção civil, trazendo o que há de melhor em Lajes, Ferragem Armada e Pedras Portuguesas para calçadas decorativas, com experiência de 20 anos na área. Temos técnicos e mão de obra especializada e comprometida com o serviço."></Label>
+            <Grid Column="2">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="RCA" FontSize="40" FontAttributes="Bold"></Label>
             </Grid>
 
-            <Label Text="Nossos Serviços" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
-
-            <Grid Margin="15,0">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-
-
-                <Grid Row="0" Column="0" Margin="5,10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid BackgroundColor="AntiqueWhite" Row="0" Column="0">
-                        <Label Text="CALÇADAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
-                    </Grid>
-
-                    <Grid BackgroundColor="AntiqueWhite" Row="1" Column="0">
-                        <Image Source="calcada.png" HeightRequest="170" WidthRequest="170"></Image>
-                    </Grid>
-
-                </Grid>
-
-
-
-                <Grid Row="0" Column="1" Margin="5,10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid BackgroundColor="AntiqueWhite" Row="0" Column="0">
-                        <Label Text="CALÇADAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
-                    </Grid>
-
-                    <Grid BackgroundColor="AntiqueWhite" Row="1" Column="0">
-                        <Image Source="calcada.png" HeightRequest="170" WidthRequest="170"></Image>
-                    </Grid>
-
-                </Grid>
-
-                <Grid Row="1" Column="0" Margin="5,10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid BackgroundColor="AntiqueWhite" Row="0" Column="0">
-                        <Label Text="CALÇADAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
-                    </Grid>
-
-                    <Grid BackgroundColor="AntiqueWhite" Row="1" Column="0">
-                        <Image Source="calcada.png" HeightRequest="170" WidthRequest="170"></Image>
-                    </Grid>
-
-                </Grid>
-
-
+            <Grid Column="3" Margin="15,0,15,0">
+                <ImageButton BackgroundColor="#FFDC54" x:Name="BTNAccount" Source="person.svg" Clicked="BTNAccount_Clicked" CornerRadius="25" WidthRequest="50" HeightRequest="50" 
+          HorizontalOptions="End" VerticalOptions="Center">
+                </ImageButton>
             </Grid>
 
-            <Grid>
+        </Grid>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <Label Text="Construção" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
 
-
-                <Grid Row="0" Margin="0,25,0,0">
-                    <Label Text="OI TEXTRE AQUI!" HorizontalOptions="Center"></Label>
+                <Grid Background="#FFDC54" >
+                    <Label FontSize="Body" Margin="15,15,15,15" Text="Somos uma empresa do ramo de construção civil, trazendo o que há de melhor em Lajes, Ferragem Armada e Pedras Portuguesas para calçadas decorativas, com experiência de 20 anos na área. Temos técnicos e mão de obra especializada e comprometida com o serviço."></Label>
                 </Grid>
 
-                <Grid Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                <Label Text="Nossos Serviços" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,0"></Label>
+
+                <Label Text="Clicke nos Cards para saber mais ↓" FontSize="14"  HorizontalOptions="Center" Margin="0,0,0,30"></Label>
+
+                <Grid Margin="15,0">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <StackLayout Grid.Column="0">
-                        <Label Text="Texte1" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte2" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte3" HorizontalOptions="Center"></Label>
-                    </StackLayout>
-
-                    <StackLayout Grid.Column="1">
-                        <Label Text="Texte11" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte22" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte33" HorizontalOptions="Center"></Label>
-                    </StackLayout>
-                </Grid>
-
-                <Grid Row="2" Margin="0,25,0,0">
-                    <Label Text="OI TEXTRE AQUI!" HorizontalOptions="Center"></Label>
-                </Grid>
-
-                <Grid Row="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <StackLayout Grid.Column="0">
-                        <Label Text="Texte1" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte2" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte3" HorizontalOptions="Center"></Label>
-                    </StackLayout>
-
-                    <StackLayout Grid.Column="1">
-                        <Label Text="Texte11" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte22" HorizontalOptions="Center"></Label>
-                        <Label Text="Texte33" HorizontalOptions="Center"></Label>
-                    </StackLayout>
-                </Grid>
-
-                <Grid Row="4" Margin="0,25" BackgroundColor="AliceBlue">
-                    <Image Source="local.svg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
-                </Grid>
-
-                <Grid Row="5">
-
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid Column="0">
-                        <ImageButton x:Name="BTNTellIcon" Source="tell.svg" Clicked="BTNTellIcon_Clicked"></ImageButton>
-                    </Grid>
 
-                    <Grid Column="1">
-                        <ImageButton x:Name="BTNFaceIcon" Source="face.svg" Clicked="BTNFaceIcon_Clicked"></ImageButton>
-                    </Grid>
+                    <!--CARD SERVISOS - - - INICIO -->
+                    <Grid Row="0" Column="0" Margin="5,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                    <Grid Column="2">
-                        <ImageButton x:Name="BTNZapIcon" Source="zapicon.svg" Clicked="BTNZapIcon_Clicked"></ImageButton>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid BackgroundColor="#FFDC54" Row="0" Column="0">
+                            <Label Text="CALÇADAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                        </Grid>
+
+                        <Grid BackgroundColor="#FFDC54" Row="1" Column="0">
+                            <ImageButton x:Name="BTNCardCalçada" Clicked="BTNCardCalçada_Clicked" Source="calcada.png" HeightRequest="170" WidthRequest="170"></ImageButton>
+                        </Grid>
+
                     </Grid>
+                    <!--CARD SERVISOS - - - FIM -->
+
+                    <!--CARD SERVISOS - - - INICIO -->
+                    <Grid Row="0" Column="1" Margin="5,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid BackgroundColor="#FFDC54" Row="0" Column="0">
+                            <Label Text="REFORMAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                        </Grid>
+
+                        <Grid BackgroundColor="#FFDC54" Row="1" Column="0">
+                            <ImageButton x:Name="BTNCardReforma" Clicked="BTNCardReforma_Clicked" Source="reforma6.jpg" HeightRequest="170" WidthRequest="170"></ImageButton>
+                        </Grid>
+
+                    </Grid>
+                    <!--CARD SERVISOS - - - FIM -->
+
+                    <!--CARD SERVISOS - - - INICIO -->
+                    <Grid Row="1" Column="0" Margin="5,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid BackgroundColor="#FFDC54" Row="0" Column="0">
+                            <Label Text="MUROS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                        </Grid>
+
+                        <Grid BackgroundColor="#FFDC54" Row="1" Column="0">
+                            <ImageButton x:Name="BTNCardMuros" Clicked="BTNCardMuros_Clicked" Source="muro.jpg" HeightRequest="170" WidthRequest="170"></ImageButton>
+                        </Grid>
+
+                    </Grid>
+                    <!--CARD SERVISOS - - - FIM -->
+
+                    <!--CARD SERVISOS - - - INICIO -->
+                    <Grid Row="1" Column="1" Margin="5,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid BackgroundColor="#FFDC54" Row="0" Column="0">
+                            <Label Text="ELÉTRICA" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                        </Grid>
+
+                        <Grid BackgroundColor="#FFDC54" Row="1" Column="0">
+                            <ImageButton x:Name="BTNCardEletrica" Clicked="BTNCardEletrica_Clicked" Source="eletrica.jpg" HeightRequest="170" WidthRequest="170"></ImageButton>
+                        </Grid>
+
+                    </Grid>
+                    <!--CARD SERVISOS - - - FIM -->
+
+                    <!--CARD SERVISOS - - - INICIO -->
+                    <Grid Row="2" Column="0" Margin="5,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid BackgroundColor="#FFDC54" Row="0" Column="0">
+                            <Label Text="PISCINAS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                        </Grid>
+
+                        <Grid BackgroundColor="#FFDC54" Row="1" Column="0">
+                            <ImageButton x:Name="BTNCardPiscinas" Clicked="BTNCardPiscinas_Clicked" Source="piscina.jpg" HeightRequest="170" WidthRequest="170"></ImageButton>
+                        </Grid>
+
+                    </Grid>
+                    <!--CARD SERVISOS - - - FIM -->
+
+                    <!--CARD SERVISOS - - - INICIO -->
+                    <Grid Row="2" Column="1" Margin="5,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid BackgroundColor="#FFDC54" Row="0" Column="0">
+                            <Label Text="ACABAMENTOS" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                        </Grid>
+
+                        <Grid BackgroundColor="#FFDC54" Row="1" Column="0">
+                            <ImageButton x:Name="BTNCardAcabamento" Clicked="BTNCardAcabamento_Clicked" Source="acabamento.jpg" HeightRequest="170" WidthRequest="170"></ImageButton>
+                        </Grid>
+
+                    </Grid>
+                    <!--CARD SERVISOS - - - FIM -->
+
+
                 </Grid>
 
-            </Grid>
+                <Grid BackgroundColor="White">
 
-            <Label Text="Avaliações" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
-
-            <!--AVALIAÇÃO CARD - - - INICIO -->
-            <Grid Margin="15,0">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-
-                
-                <Grid Column="0" BackgroundColor="AliceBlue" Margin="25,25,25,25">
-                    <Border>
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="100"/>
-                        </Border.StrokeShape>
-                        <Image Source="person.svg" ></Image>
-                    </Border>
-                </Grid>
-
-
-                <Grid Margin="5,10" Column="1" BackgroundColor="Beige">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -260,169 +226,319 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid BackgroundColor="AntiqueWhite" Row="0">
-                        <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+                    <Grid Row="0" Margin="0,25,0,0">
+                        <Label Text="Nossa Localidade" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold"></Label>
                     </Grid>
 
-                    <Grid BackgroundColor="AntiqueWhite" Row="1">
-                        <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
+                    <Grid Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Column="0" Margin="0,15,0,0">
+                            <Label Text="Rua Atibaia - 355" HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"></Label>
+                            <Label Text="Jardim santa cecclia III" HorizontalOptions="Center"></Label>
+                            <Label Text="Brotas - SP" HorizontalOptions="Center"></Label>
+                            <Label Text="CEP: 17380-122" HorizontalOptions="Center"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Margin="0,15,0,0">
+                            <Label Text="Telefones" HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"></Label>
+                            <Label Text="(14)9997-7790" HorizontalOptions="Center"></Label>
+                            <Label Text="(14)9997-7790" HorizontalOptions="Center"></Label>
+                        </StackLayout>
                     </Grid>
 
-                    <Grid Row="2"  BackgroundColor="AliceBlue">
-                        <HorizontalStackLayout>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="star.svg"></Image>
-                        <Image Source="blackstar.svg"></Image>
-                        </HorizontalStackLayout>
+                    <Grid Row="2" Margin="0,25,0,0">
+                        <Label Text="Horário de Funcionamento" HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"></Label>
                     </Grid>
+
+                    <Grid Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Column="0" Margin="0,15,0,0">
+                            <Label Text="Segunda a Sexta" HorizontalOptions="Center"></Label>
+                            <Label Text="" HorizontalOptions="Center"></Label>
+                            <Label Text="Sábado, Domingo e Feriados" HorizontalOptions="Center" Margin="0,15,0,0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Margin="0,15,0,0">
+                            <Label Text="07:00 - 12:00" HorizontalOptions="Center"></Label>
+                            <Label Text="13:30 - 17:00" HorizontalOptions="Center"></Label>
+                            <Label Text="Fechado" HorizontalOptions="Center" Margin="0,15,0,0"></Label>
+                        </StackLayout>
+                    </Grid>
+
+                    <Grid Row="4" Margin="0,25">
+                        <Image Source="localpng.png" HeightRequest="200" Aspect="Fill"/>
+                    </Grid>
+
+                    <Grid Row="5" Padding="0,0,0,15">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Column="0">
+                            <ImageButton x:Name="BTNTellIcon" Source="tell.svg" Clicked="BTNTellIcon_Clicked"></ImageButton>
+                        </Grid>
+
+                        <Grid Column="1">
+                            <ImageButton x:Name="BTNFaceIcon" Source="face.svg" Clicked="BTNFaceIcon_Clicked"></ImageButton>
+                        </Grid>
+
+                        <Grid Column="2">
+                            <ImageButton x:Name="BTNZapIcon" Source="zapicon.svg" Clicked="BTNZapIcon_Clicked"></ImageButton>
+                        </Grid>
+                    </Grid>
+
                 </Grid>
 
+                <Label Text="Avaliações" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
 
-            </Grid>
-            <!--AVALIAÇÃO CARD - - - FIM -->
+                <!--AVALIAÇÃO CARD - - - INICIO -->
+                <Grid Margin="15,0">
 
-            <!--AVALIAÇÃO CARD - - - INICIO -->
-            <Grid Margin="15,0">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-
-
-                <Grid Column="0" BackgroundColor="AliceBlue" Margin="25,25,25,25">
-                    <Border>
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="100"/>
-                        </Border.StrokeShape>
-                        <Image Source="person.svg" ></Image>
-                    </Border>
-                </Grid>
-
-
-                <Grid Margin="5,10" Column="1" BackgroundColor="Beige">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid BackgroundColor="AntiqueWhite" Row="0">
-                        <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+                    <Grid Column="0"  Margin="25,25,25,25">
+                        <Border BackgroundColor="#FFDC54" StrokeThickness="0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="100"/>
+                            </Border.StrokeShape>
+                            <Border.Shadow>
+                                <Shadow Brush="Black"
+                                         Offset="2,2"
+                                         Radius="1"
+                                         Opacity="1" />
+                            </Border.Shadow>
+                            <Image Source="person.svg" ></Image>
+                        </Border>
                     </Grid>
 
-                    <Grid BackgroundColor="AntiqueWhite" Row="1">
-                        <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
+                    <Grid Margin="5,10" Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Grid Row="0">
+                            <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Start"></Label>
+                        </Grid>
+
+                        <Grid Row="1">
+                            <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
+                        </Grid>
+
+                        <Grid Row="2">
+                            <HorizontalStackLayout>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="blackstar.svg"></Image>
+                            </HorizontalStackLayout>
+                        </Grid>
+
                     </Grid>
 
-                    <Grid Row="2"  BackgroundColor="AliceBlue">
-                        <HorizontalStackLayout>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="blackstar.svg"></Image>
-                        </HorizontalStackLayout>
-                    </Grid>
+
                 </Grid>
+                <!--AVALIAÇÃO CARD - - - FIM -->
 
+                <!--AVALIAÇÃO CARD - - - INICIO -->
+                <Grid Margin="15,0">
 
-            </Grid>
-            <!--AVALIAÇÃO CARD - - - FIM -->
-
-            <!--AVALIAÇÃO CARD - - - INICIO -->
-            <Grid Margin="15,0">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-
-
-                <Grid Column="0" BackgroundColor="AliceBlue" Margin="25,25,25,25">
-                    <Border>
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="100"/>
-                        </Border.StrokeShape>
-                        <Image Source="person.svg" ></Image>
-                    </Border>
-                </Grid>
-
-
-                <Grid Margin="5,10" Column="1" BackgroundColor="Beige">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid BackgroundColor="AntiqueWhite" Row="0">
-                        <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+                    <Grid Column="0"  Margin="25,25,25,25">
+                        <Border BackgroundColor="#FFDC54" StrokeThickness="0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="100"/>
+                            </Border.StrokeShape>
+                            <Border.Shadow>
+                                <Shadow Brush="Black"
+                 Offset="2,2"
+                 Radius="1"
+                 Opacity="1" />
+                            </Border.Shadow>
+                            <Image Source="person.svg" ></Image>
+                        </Border>
                     </Grid>
 
-                    <Grid BackgroundColor="AntiqueWhite" Row="1">
-                        <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
+                    <Grid Margin="5,10" Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Grid Row="0">
+                            <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Start"></Label>
+                        </Grid>
+
+                        <Grid Row="1">
+                            <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
+                        </Grid>
+
+                        <Grid Row="2">
+                            <HorizontalStackLayout>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="blackstar.svg"></Image>
+                            </HorizontalStackLayout>
+                        </Grid>
+
                     </Grid>
 
-                    <Grid Row="2"  BackgroundColor="AliceBlue">
-                        <HorizontalStackLayout>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="star.svg"></Image>
-                            <Image Source="blackstar.svg"></Image>
-                        </HorizontalStackLayout>
-                    </Grid>
+
                 </Grid>
+                <!--AVALIAÇÃO CARD - - - FIM -->
+
+                <!--AVALIAÇÃO CARD - - - INICIO -->
+                <Grid Margin="15,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
 
 
-            </Grid>
-            <!--AVALIAÇÃO CARD - - - FIM -->
+                    <Grid Column="0"  Margin="25,25,25,25">
+                        <Border BackgroundColor="#FFDC54" StrokeThickness="0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="100"/>
+                            </Border.StrokeShape>
+                            <Border.Shadow>
+                                <Shadow Brush="Black"
+                                Offset="2,2"
+                                Radius="1"
+                                Opacity="1" />
+                            </Border.Shadow>
+                            <Image Source="person.svg" ></Image>
+                        </Border>
+                    </Grid>
 
-            <!--AVALIAÇÃO VER MAIS - - - INICIO -->
-            <Grid Margin="0,25,0,50">
-                <Label Text="Ver Mais ↓" HorizontalOptions="Center"></Label>
-            </Grid>
-            <!--AVALIAÇÃO VER MAIS - - - FIM -->
+                    <Grid Margin="5,10" Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
 
-            <!--MENU INFERIOR - - - INICIO -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                
-                <ImageButton Grid.Column="0" x:Name="BTNIconMenuInferiorHome" Source="homeicon.svg" Clicked="BTNIconMenuInferiorHome_Clicked"></ImageButton>
-                <ImageButton Grid.Column="1" x:Name="BTNIconMenuInferiorLaje" Source="lajeicon.svg" Clicked="BTNIconMenuInferiorLaje_Clicked"></ImageButton>
-                <ImageButton Grid.Column="2" x:Name="BTNIconMenuInferiorInfo" Source="infoicon.svg" Clicked="BTNIconMenuInferiorInfo_Clicked"></ImageButton>
-            </Grid>
-            <!--MENU INFERIOR - - - FIM -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
 
-        </VerticalStackLayout>
-    </ScrollView>
+
+                        <Grid Row="0">
+                            <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Start"></Label>
+                        </Grid>
+
+                        <Grid Row="1">
+                            <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
+                        </Grid>
+
+                        <Grid Row="2">
+                            <HorizontalStackLayout>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="star.svg"></Image>
+                                <Image Source="blackstar.svg"></Image>
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                    </Grid>
+
+
+                </Grid>
+                <!--AVALIAÇÃO CARD - - - FIM -->
+
+                <!--AVALIAÇÃO VER MAIS - - - INICIO -->
+                <Grid Margin="0,25,0,50">
+                    <Label Text="Ver Mais ↓" HorizontalOptions="Center"></Label>
+                </Grid>
+                <!--AVALIAÇÃO VER MAIS - - - FIM -->
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+
+        <!--MENU INFERIOR - - - INICIO -->
+        <Grid Row="2" BackgroundColor="#FFDC54">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <ImageButton Grid.Column="0" x:Name="BTNIconMenuInferiorHome" Source="homeicon.svg" Clicked="BTNIconMenuInferiorHome_Clicked"></ImageButton>
+            <ImageButton Grid.Column="1" x:Name="BTNIconMenuInferiorLaje" Source="lajeicon.svg" Clicked="BTNIconMenuInferiorLaje_Clicked"></ImageButton>
+            <ImageButton Grid.Column="2" x:Name="BTNIconMenuInferiorInfo" Source="infoicon.svg" Clicked="BTNIconMenuInferiorInfo_Clicked"></ImageButton>
+
+        </Grid>
+        <!--MENU INFERIOR - - - FIM -->
+
+
+
+
+    </Grid>
 
 </ContentPage>
