@@ -4,7 +4,7 @@ namespace RcaApp.Pages;
 
 public partial class Acount : ContentPage
 {
-    Usuario _usuario;
+    private Usuario _usuario;
 
     public Acount()
     {
@@ -15,7 +15,31 @@ public partial class Acount : ContentPage
         this.BindingContext = _usuario;
 
         TXTBemVindo.Text = $"Seja Bem-Vindo {App.Usuario.Nome}! ";
+
+        fotoPerfil.Clicked += async (sender, e) =>
+        {
+            if (MediaPicker.IsCaptureSupported)
+            {
+                var file = await MediaPicker.PickPhotoAsync();
+                if (file != null)
+                {
+                    var filePath = file.FullPath;
+
+                    // Defina a fonte da imagem diretamente no ImageButton
+                    fotoPerfil.Source = ImageSource.FromFile(filePath);
+
+                    // Salve o caminho da imagem no modelo de usuário
+                    _usuario.Foto = filePath;
+                    await App.BancoDados.UserDataTable.salvarUsuario(_usuario);
+
+                }
+            }
+        };
+
+
     }
+
+
 
 
     private void BTNBack_Clicked(object sender, EventArgs e)
@@ -38,6 +62,9 @@ public partial class Acount : ContentPage
         Navigation.PushAsync(new InfoPage());
     }
 
-
+    private async void BTNSalvarAcc_Clicked(object sender, EventArgs e)
+    {
+        await App.BancoDados.UserDataTable.salvarUsuario(_usuario);
+    }
 }
 

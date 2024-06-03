@@ -58,8 +58,18 @@
 
                 <Label x:Name="TXTBemVindo" Text="" HorizontalOptions="Center" Margin="0,35" FontSize="24" FontAttributes="Bold, Italic"></Label>
 
+                <ImageButton BackgroundColor="LightGray" x:Name="fotoPerfil" HorizontalOptions="Center" VerticalOptions="Center" Margin="10" CornerRadius="100" HeightRequest="200" WidthRequest="200"
+      Aspect="AspectFill" Source="{Binding Foto, TargetNullValue='person.svg'}">
+                    <ImageButton.Shadow>
+                        <Shadow Brush="Black" Offset="5,15" Radius="10" Opacity="0.3" />
+                    </ImageButton.Shadow>
+
+                </ImageButton>
+
+
                 <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -73,21 +83,27 @@
                     <Grid Row="0" Column="0" Margin="24,24,12,12">
 
                         <Button BackgroundColor="#FFDC54" Text="NOME" TextColor="Black" FontAttributes="Bold" FontSize="18">
-
+                            <Button.Shadow>
+                                <Shadow Brush="Black" Offset="5,15" Radius="10" Opacity="0.3" />
+                            </Button.Shadow>
                         </Button>
 
                     </Grid>
                     <Grid Row="01" Column="0" Margin="24,24,12,12">
 
                         <Button BackgroundColor="#FFDC54" Text="EMAIL" TextColor="Black" FontAttributes="Bold" FontSize="18">
-
+                            <Button.Shadow>
+                                <Shadow Brush="Black" Offset="5,15" Radius="10" Opacity="0.3" />
+                            </Button.Shadow>
                         </Button>
 
                     </Grid>
                     <Grid Row="02" Column="0" Margin="24,24,12,12">
 
                         <Button BackgroundColor="#FFDC54" Text="SENHA" TextColor="Black" FontAttributes="Bold" FontSize="18">
-
+                            <Button.Shadow>
+                                <Shadow Brush="Black" Offset="5,15" Radius="10" Opacity="0.3" />
+                            </Button.Shadow>
                         </Button>
 
                     </Grid>
@@ -128,11 +144,19 @@
                             </Border.Shadow>
 
                             <Entry  BackgroundColor="#FFDC54" Text="{Binding Senha}" Placeholder="Senha" TextColor="Black" 
-                                    PlaceholderColor="Black" FontAttributes="Bold" FontSize="18"/>
+                PlaceholderColor="Black" FontAttributes="Bold" FontSize="18"/>
                         </Border>
                     </Grid>
 
                 </Grid>
+
+                <Button Grid.Column="0" Grid.Row="3" x:Name="BTNSalvarAcc" Clicked="BTNSalvarAcc_Clicked" 
+                        Margin="0,25" FontAttributes="Bold" HorizontalOptions="Center" Text="SALVAR" TextColor="Black" BackgroundColor="#FFDC54">
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Offset="5,15" Radius="10" Opacity="0.3" />
+                    </Button.Shadow>
+                </Button>
+
 
             </VerticalStackLayout>
         </ScrollView>
