@@ -25,10 +25,8 @@ public partial class Acount : ContentPage
                 {
                     var filePath = file.FullPath;
 
-                    // Defina a fonte da imagem diretamente no ImageButton
                     fotoPerfil.Source = ImageSource.FromFile(filePath);
 
-                    // Salve o caminho da imagem no modelo de usuário
                     _usuario.Foto = filePath;
                     await App.BancoDados.UserDataTable.salvarUsuario(_usuario);
 

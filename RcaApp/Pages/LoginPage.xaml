@@ -113,7 +113,7 @@
             </Border>
 
             <Border StrokeThickness = "0">
-
+                <VerticalStackLayout>
                 <Button
                     x:Name="BTNEntar"
                     Text="ENTRAR"
@@ -125,6 +125,18 @@
                     FontSize="20"
                     Margin="0,25,0,0"/>
 
+                <Button
+    x:Name="BTNEntarConta2"
+    Text="CONTA"
+    TextColor="Black"
+    WidthRequest="250"
+    BackgroundColor="#FFDC54"
+    Clicked="BTNEntarConta2_Clicked"
+    FontAttributes="Bold"
+    FontSize="20"
+    Margin="0,25,0,0"/>
+                </VerticalStackLayout>
+            
                 <Border.Shadow>
                     <Shadow Brush="Black"
                              Offset="20,20"
