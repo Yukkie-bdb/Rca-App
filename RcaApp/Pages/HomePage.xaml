@@ -389,7 +389,7 @@
 
                                     </Grid>
 
-                                    <Button x:Name="BTNDeletarAvaliacao" Clicked="BTNDeletarAvaliacao_Clicked" Margin="0,10,0,25" ImageSource="lixo.svg" HeightRequest="50" BackgroundColor="Red" HorizontalOptions="Center" CommandParameter="{Binding .}" />
+                                    <Button x:Name="BTNDeletarAvaliacao" Clicked="BTNDeletarAvaliacao_Clicked" Margin="0,10,0,25" ImageSource="trash.svg" HeightRequest="50" BackgroundColor="Red" HorizontalOptions="Center" CommandParameter="{Binding .}" />
 
                                     <!--AVALIAÇÃO CARD - - - FIM -->
 
@@ -401,16 +401,12 @@
                     </CollectionView>
 
                     <StackLayout x:Name="SLAvaliacaoVazia">
-                        <Label Text="Nenhuma avaliação até o momento" />
+                        <Label Text="Nenhuma avaliação até o momento" FontSize="18" Margin="0,0,0,20" Opacity="0.5" HorizontalOptions="Center"/>
                     </StackLayout>
 
-                    <Button Text="Adicionar Avaliação" Clicked="OnAddAvaliacaoClicked" />
+                    <Button ImageSource="plus.svg" Background="Transparent" Clicked="OnAddAvaliacaoClicked" WidthRequest="75" HeightRequest="75"/>
 
-                    <StackLayout x:Name="AddAvaliacaoLayout" IsVisible="False">
-                        <Entry Placeholder="Comentário" x:Name="ENTComentario" />
-                        <Entry Placeholder="Estrelas (1 a 5)" Keyboard="Numeric" x:Name="ENTEstrelas" />
-                        <Button Text="Salvar" Clicked="OnSaveAvaliacaoClicked" />
-                    </StackLayout>
+                   
                 </StackLayout>
 
                 <!--AVALIAÇÃO CARD - - - FIM -->
@@ -418,9 +414,7 @@
                 <!--AVALIAÇÃO CARD - - - FIM -->
 
                 <!--AVALIAÇÃO VER MAIS - - - INICIO -->
-                <Grid Margin="0,25,0,50">
-                    <Label Text="Ver Mais ↓" HorizontalOptions="Center"></Label>
-                </Grid>
+
                 <!--AVALIAÇÃO VER MAIS - - - FIM -->
 
 

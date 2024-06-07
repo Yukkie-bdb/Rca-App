@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RcaApp.Pages.LajePage"
              Title="LajePage"
-                          NavigationPage.HasNavigationBar="False"
-              BackgroundImageSource="zap.png">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="zap.png"
+             xmlns:controls="clr-namespace:XGENO.Maui.Controls;assembly=Maui.Controls.RatingView">
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -249,211 +251,116 @@
 
                 <Label Text="Avaliações" FontSize="36" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,30"></Label>
 
+
+
                 <!--AVALIAÇÃO CARD - - - INICIO -->
-                <Grid Margin="15,0">
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
+                <!--AVALIAÇÃO CARD - - - INICIO -->
+                <!--AVALIAÇÃO CARD - - - INICIO -->
 
 
-                    <Grid Column="0"  Margin="25,25,25,25">
-                        <Border BackgroundColor="#6A6FE0" StrokeThickness="0">
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="100"/>
-                            </Border.StrokeShape>
-                            <Border.Shadow>
-                                <Shadow Brush="Black"
-                                         Offset="2,2"
-                                         Radius="1"
-                                         Opacity="1" />
-                            </Border.Shadow>
-                            <Image Source="person.svg" ></Image>
-                        </Border>
-                    </Grid>
+                <StackLayout Padding="10">
 
-                    <Grid Margin="5,10" Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
+                    <CollectionView x:Name="AvaliacoesCollectionView">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                                    <!--AVALIAÇÃO CARD - - - INICIO -->
 
 
+                                    <Grid Margin="15,0">
 
-                        <Grid Row="0">
-                            <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Start"></Label>
-                        </Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
 
-                        <Grid Row="1">
-                            <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
-                        </Grid>
-
-                        <Grid Row="2">
-                            <HorizontalStackLayout>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="blackstar.svg"></Image>
-                            </HorizontalStackLayout>
-                        </Grid>
-
-                    </Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                        </Grid.ColumnDefinitions>
 
 
-                </Grid>
+                                        <Grid Column="0"  Margin="25,25,25,25">
+                                            <Border BackgroundColor="#FFDC54" StrokeThickness="0">
+                                                <Border.StrokeShape>
+                                                    <RoundRectangle CornerRadius="100"/>
+                                                </Border.StrokeShape>
+                                                <Border.Shadow>
+                                                    <Shadow Brush="Black" Offset="2,2" Radius="1" Opacity="1" />
+                                                </Border.Shadow>
+                                                <Image Source="person.svg" ></Image>
+                                            </Border>
+                                        </Grid>
+
+                                        <Grid Margin="5,10" Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+
+
+                                            <Grid Row="0">
+                                                <Label Text="{Binding Nome}" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Start"></Label>
+                                            </Grid>
+
+                                            <Grid Row="1">
+                                                <Label Text="{Binding Comentario}"></Label>
+                                            </Grid>
+
+                                            <Grid Row="2" Margin="0,15,0,0" HorizontalOptions="Start">
+                                                <controls:RatingView
+                            ItemCount="5"
+                            ItemSize="38"
+                            ItemSpacing="6"
+                            Value="{Binding Estrelas}"
+                            RatedFillColor="Yellow"
+                            UnRatedFillColor="LightGrey"
+                            StrokeColor="Black"
+                            StrokeWidth="1"
+                            HorizontalOptions="Start"/>
+                                            </Grid>
+
+                                        </Grid>
+
+                                    </Grid>
+
+                                    <Button x:Name="BTNDeletarAvaliacao" Clicked="BTNDeletarAvaliacao_Clicked" Margin="0,10,0,25" ImageSource="trash.svg" HeightRequest="50" BackgroundColor="Red" HorizontalOptions="Center" CommandParameter="{Binding .}" />
+
+                                    <!--AVALIAÇÃO CARD - - - FIM -->
+
+
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <StackLayout x:Name="SLAvaliacaoVazia">
+                        <Label Text="Nenhuma avaliação até o momento" FontSize="18" Margin="0,0,0,20" Opacity="0.5" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <Button ImageSource="plus.svg" Background="Transparent" Clicked="OnAddAvaliacaoClicked" WidthRequest="75" HeightRequest="75"/>
+
+
+                </StackLayout>
+
                 <!--AVALIAÇÃO CARD - - - FIM -->
-
-                <!--AVALIAÇÃO CARD - - - INICIO -->
-                <Grid Margin="15,0">
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-
-
-                    <Grid Column="0"  Margin="25,25,25,25">
-                        <Border BackgroundColor="#6A6FE0" StrokeThickness="0">
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="100"/>
-                            </Border.StrokeShape>
-                            <Border.Shadow>
-                                <Shadow Brush="Black"
-                 Offset="2,2"
-                 Radius="1"
-                 Opacity="1" />
-                            </Border.Shadow>
-                            <Image Source="person.svg" ></Image>
-                        </Border>
-                    </Grid>
-
-                    <Grid Margin="5,10" Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-
-
-                        <Grid Row="0">
-                            <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Start"></Label>
-                        </Grid>
-
-                        <Grid Row="1">
-                            <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
-                        </Grid>
-
-                        <Grid Row="2">
-                            <HorizontalStackLayout>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="blackstar.svg"></Image>
-                            </HorizontalStackLayout>
-                        </Grid>
-
-                    </Grid>
-
-
-                </Grid>
                 <!--AVALIAÇÃO CARD - - - FIM -->
-
-                <!--AVALIAÇÃO CARD - - - INICIO -->
-                <Grid Margin="15,0">
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-
-
-                    <Grid Column="0"  Margin="25,25,25,25">
-                        <Border BackgroundColor="#6A6FE0" StrokeThickness="0">
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="100"/>
-                            </Border.StrokeShape>
-                            <Border.Shadow>
-                                <Shadow Brush="Black"
-                                Offset="2,2"
-                                Radius="1"
-                                Opacity="1" />
-                            </Border.Shadow>
-                            <Image Source="person.svg" ></Image>
-                        </Border>
-                    </Grid>
-
-                    <Grid Margin="5,10" Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-
-
-                        <Grid Row="0">
-                            <Label Text="Nome Da Silva" FontSize="20" Margin="0,5" FontAttributes="Bold" HorizontalOptions="Start"></Label>
-                        </Grid>
-
-                        <Grid Row="1">
-                            <Label Text="Acho que é um bom trabalho acho que vou dar 4 estrelas"></Label>
-                        </Grid>
-
-                        <Grid Row="2">
-                            <HorizontalStackLayout>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="star.svg"></Image>
-                                <Image Source="blackstar.svg"></Image>
-                            </HorizontalStackLayout>
-                        </Grid>
-
-                    </Grid>
-
-
-                </Grid>
                 <!--AVALIAÇÃO CARD - - - FIM -->
 
                 <!--AVALIAÇÃO VER MAIS - - - INICIO -->
-                <Grid Margin="0,25,0,50">
-                    <Label Text="Ver Mais ↓" HorizontalOptions="Center"></Label>
-                </Grid>
+
                 <!--AVALIAÇÃO VER MAIS - - - FIM -->
 
 
             </VerticalStackLayout>
         </ScrollView>
-
 
         <!--MENU INFERIOR - - - INICIO -->
         <Grid Row="2" BackgroundColor="#494FD5">

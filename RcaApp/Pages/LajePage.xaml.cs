@@ -1,12 +1,22 @@
+using CommunityToolkit.Maui.Views;
+using RcaApp.Model;
 using RcaApp.Pages.Cards;
+using System.Collections.ObjectModel;
 
 namespace RcaApp.Pages;
 
 public partial class LajePage : ContentPage
 {
+    private ObservableCollection<Avaliacao> _avaliacoes;
     public LajePage()
     {
         InitializeComponent();
+
+        _avaliacoes = new ObservableCollection<Avaliacao>();
+
+        AvaliacoesCollectionView.ItemsSource = _avaliacoes;
+
+        CarregarAvaliacoes();
     }
 
     private void BTNBack_Clicked(object sender, EventArgs e)
@@ -87,5 +97,61 @@ public partial class LajePage : ContentPage
     {
         Navigation.PushAsync(new Pintura());
 
+    }
+    private void BTNAvaliacao_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new AvaliacoesPage());
+    }
+
+    public async void CarregarAvaliacoes()
+    {
+        var avaliacoesList = await App.BancoDados.AvaliacaoDataTable.GetAvaliacoesAsync();
+        _avaliacoes.Clear();
+
+        foreach (var avaliacao in avaliacoesList)
+        {
+            _avaliacoes.Add(avaliacao);
+        }
+
+        //SLAvaliacaoVazia.IsVisible = _avaliacoes.Count == 0;
+
+
+    }
+
+    private void OnAddAvaliacaoClicked(object sender, EventArgs e)
+    {
+        //AddAvaliacaoLayout.IsVisible = true;
+        var popup = new AddAvaliacaoPopup(_avaliacoes);
+        this.ShowPopup(popup);
+
+        if (_avaliacoes.Count > 0)
+        {
+            SLAvaliacaoVazia.IsVisible = false;
+        }
+        else
+        {
+            SLAvaliacaoVazia.IsVisible = false;
+        }
+    }
+
+    private async void BTNDeletarAvaliacao_Clicked(object sender, EventArgs e)
+    {
+        var button = sender as Button;
+        var avaliacao = button?.CommandParameter as Avaliacao;
+
+        if (avaliacao != null)
+        {
+            var confirm = await DisplayAlert("Confirmar Exclusão", "Você deseja deletar esta avaliação?", "Sim", "Não");
+            if (confirm)
+            {
+                await App.BancoDados.AvaliacaoDataTable.deletarAvaliacao(avaliacao);
+                _avaliacoes.Remove(avaliacao);
+                SLAvaliacaoVazia.IsVisible = _avaliacoes.Count == 0;
+            }
+        }
+        else
+        {
+            System.Diagnostics.Debug.WriteLine("Avaliacao é nulo.");
+        }
     }
 }

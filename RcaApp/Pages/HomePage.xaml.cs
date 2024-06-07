@@ -1,6 +1,7 @@
 using RcaApp.Model;
 using System.Collections.ObjectModel;
 using RcaApp.Pages.Cards;
+using CommunityToolkit.Maui.Views;
 
 namespace RcaApp.Pages;
 
@@ -77,8 +78,7 @@ public partial class HomePage : ContentPage
 
     private void BTNIconMenuInferiorInfo_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushModalAsync(new AvaliacoesPage());
-        //Navigation.PushAsync(new InfoPage());
+        Navigation.PushAsync(new InfoPage());
     }
 
     private void BTNCardCalçada_Clicked(object sender, EventArgs e)
@@ -117,7 +117,7 @@ public partial class HomePage : ContentPage
         Navigation.PushAsync(new AvaliacoesPage());
     }
 
-    private async void CarregarAvaliacoes()
+    public async void CarregarAvaliacoes()
     {
         var avaliacoesList = await App.BancoDados.AvaliacaoDataTable.GetAvaliacoesAsync();
         _avaliacoes.Clear();
@@ -127,34 +127,25 @@ public partial class HomePage : ContentPage
             _avaliacoes.Add(avaliacao);
         }
 
-        SLAvaliacaoVazia.IsVisible = _avaliacoes.Count == 0;
+        //SLAvaliacaoVazia.IsVisible = _avaliacoes.Count == 0;
+
+   
     }
 
     private void OnAddAvaliacaoClicked(object sender, EventArgs e)
     {
-        AddAvaliacaoLayout.IsVisible = true;
-    }
+        //AddAvaliacaoLayout.IsVisible = true;
+        var popup = new AddAvaliacaoPopup(_avaliacoes);
+        this.ShowPopup(popup);
 
-    private async void OnSaveAvaliacaoClicked(object sender, EventArgs e)
-    {
-        var comentario = ENTComentario.Text;
-        var estrelas = int.Parse(ENTEstrelas.Text);
-
-        var novaAvaliacao = new Avaliacao
+        if (_avaliacoes.Count > 0)
         {
-            Id = Guid.NewGuid(),
-            Nome = App.Usuario.Nome,
-            Comentario = comentario,
-            Estrelas = estrelas
-        };
-
-        await App.BancoDados.AvaliacaoDataTable.salvarAvaliacao(novaAvaliacao);
-
-        _avaliacoes.Add(novaAvaliacao);
-        AddAvaliacaoLayout.IsVisible = false;
-        SLAvaliacaoVazia.IsVisible = false;
-        ENTComentario.Text = string.Empty;
-        ENTEstrelas.Text = string.Empty;
+            SLAvaliacaoVazia.IsVisible = false;
+        }
+        else
+        {
+            SLAvaliacaoVazia.IsVisible = false;
+        }
     }
 
     private async void BTNDeletarAvaliacao_Clicked(object sender, EventArgs e)

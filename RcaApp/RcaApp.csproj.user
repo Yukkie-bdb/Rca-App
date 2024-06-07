@@ -20,6 +20,9 @@
     <MauiXaml Update="Pages\Acount.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Pages\AddAvaliacaoPopup.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Pages\AvaliacoesPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
