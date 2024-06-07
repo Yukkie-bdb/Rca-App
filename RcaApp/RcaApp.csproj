@@ -69,9 +69,13 @@
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 		<PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
 		<PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+		<PackageReference Include="XGENO.Maui.RatingView" Version="1.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\AvaliacoesPage1.xaml.cs">
+	    <DependentUpon>AvaliacoesPage1.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Pages\Cards\AcabamentoCardPage.xaml.cs">
 	    <DependentUpon>AcabamentoCardPage.xaml</DependentUpon>
 	  </Compile>
@@ -100,6 +104,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Acount.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AvaliacoesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AvaliacoesPage1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Cards\AcabamentoCardPage.xaml">

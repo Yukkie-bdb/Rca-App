@@ -69,7 +69,8 @@ public partial class HomePage : ContentPage
 
     private void BTNIconMenuInferiorInfo_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new InfoPage());
+        Navigation.PushModalAsync(new AvaliacoesPage());
+        //Navigation.PushAsync(new InfoPage());
     }
 
     private void BTNCardCalçada_Clicked(object sender, EventArgs e)
@@ -101,5 +102,10 @@ public partial class HomePage : ContentPage
     {
         Navigation.PushAsync(new AcabamentoCardPage());
 
+    }
+
+    private void BTNAvaliacao_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new AvaliacoesPage());
     }
 }

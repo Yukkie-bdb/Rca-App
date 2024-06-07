@@ -20,6 +20,7 @@ namespace RcaApp
             }
         }
         public static Usuario Usuario { get; set; }
+        public static Avaliacao Avaliacao { get; set; }
         public App()
 
         {
