@@ -48,36 +48,5 @@ public partial class LoginPage : ContentPage
         await Navigation.PushAsync(new EditUserPage());
     }
 
-    private async void BTNEntarConta2_Clicked(object sender, EventArgs e)
-    {
-        string email = "qq";
-        string senha = "Qq";
-
-        if (!string.IsNullOrWhiteSpace(email) && !string.IsNullOrWhiteSpace(senha))
-        {
-            var usuario = await App.BancoDados.UserDataTable.obterUsuario(email, senha);
-
-            if (usuario != null)
-            {
-                await Navigation.PushAsync(new HomePage());
-                App.Usuario = usuario;
-            }
-            else
-            {
-                await DisplayAlert("Erro", "Usuário ou senha inválidos", "OK");
-                return;
-            }
-        }
-        else
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                await DisplayAlert("Erro", "Preencha o campo de e-mail", "OK");
-            }
-            else if (string.IsNullOrWhiteSpace(senha))
-            {
-                await DisplayAlert("Erro", "Preencha o campo de senha", "OK");
-            }
-        }
-    }
+   
 }
